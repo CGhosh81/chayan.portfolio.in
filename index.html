@@ -9,120 +9,120 @@
         * {
             margin: 0;
             padding: 0;
-            font: italic;
+            font-style: italic;
+            box-sizing: border-box;
         }
 
         body {
             background-color: rgb(22, 3, 78);
             color: white;
-            scroll-behavior: smooth; /* Smooth scrolling */
+            font-family: Arial, sans-serif;
         }
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             height: 70px;
             background-color: rgb(17, 5, 52);
+            padding: 0 20px;
+        }
+
+        nav .left {
+            font-size: 1.5rem;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            list-style: none;
         }
 
         nav ul li {
-            list-style: none;
-            margin: 0 23px;
-            text-decoration: none;
-            color: white;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
+            font-size: 1rem;
         }
 
         nav ul li a:hover {
             color: rgb(163, 17, 230);
-            font-size: 1.2rem;
-        }
-
-        .left {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
 
         .firstSection {
             display: flex;
-            justify-content: space-around;
-            margin: 23px 0;
+            flex-direction: column;
             align-items: center;
+            margin: 20px;
+            text-align: center;
         }
 
         .firstSection > div {
-            width: 30%;
+            width: 100%;
         }
 
         .leftSection {
-            font-size: 1.9rem;
-            margin: 30px 0;
-            font-style: italic;
+            font-size: 1.5rem;
+            margin: 20px 0;
         }
 
         .rightSection img {
-            width: 80%;
-            margin: 50px 0;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
         }
 
         .About {
-            background-color: rgb(22, 3, 78);
-            padding: 1.25rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-            margin: auto;
-            display: flex;
-            flex-direction: column; /* Adjusted for better layout */
+            background-color: #04093d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
 
         .About h1 {
-            font-size: 2rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
         .About p {
-            font-size: 1.125rem;
-            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
 
         .contact-section {
-            background-color:  rgb(22, 3, 78);
+            background-color: #04093d;
             padding: 20px;
-            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
 
         .contact-section h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-align: left;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
         .contact-section ul {
             display: flex;
-            list-style-type: none;
+            flex-wrap: wrap;
+            list-style: none;
             padding: 0;
         }
 
         .contact-section ul li {
-            list-style: none;
-            margin: 0 23px;
-            text-decoration: none;
-            color: white;
+            display: flex;
+            align-items: center;
+            margin: 10px 15px;
         }
 
         .contact-section ul li a {
             text-decoration: none;
             color: #0077b5;
-            font-size: 1.2em;
+            font-size: 1rem;
             margin-left: 10px;
         }
 
@@ -135,18 +135,74 @@
             height: 24px;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftSection {
+                font-size: 1.2rem;
+            }
+
+            .rightSection img {
+                max-width: 90%;
+            }
+
+            .About, .contact-section {
+                margin: 10px;
+                padding: 15px;
+            }
+
             .contact-section h1 {
-                font-size: 1.5em;
+                font-size: 1.2rem;
             }
 
             .contact-section ul li a {
-                font-size: 1em;
+                font-size: 0.9rem;
             }
 
             .contact-section ul li img {
                 width: 20px;
                 height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .leftSection {
+                font-size: 1rem;
+            }
+
+            .rightSection img {
+                max-width: 100%;
+            }
+
+            .About h1, .contact-section h1 {
+                font-size: 1.1rem;
+            }
+
+            .About p, .contact-section ul li a {
+                font-size: 0.9rem;
+            }
+
+            .contact-section ul li img {
+                width: 18px;
+                height: 18px;
             }
         }
     </style>
@@ -190,22 +246,24 @@
     </section>
 
     <footer>
-        <section class="contact-section" id="contact">
-            <h1>Contact Me</h1>
-            <ul>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
-                    <a href="https://www.facebook.com/your-facebook-id" target="_blank">Facebook</a>
-                </li>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
-                    <a href="https://github.com/your-github-id" target="_blank">GitHub</a>
-                </li>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
-                    <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">LinkedIn</a>
-                </li>
-            </ul>
+        <section class="contact" id="contact">
+            <div class="contact-section">
+                <h1>Contact Me</h1>
+                <ul>
+                    <li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+                        <a href="https://www.facebook.com/your-facebook-id" target="_blank">Facebook</a>
+                    </li>
+                    <li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
+                        <a href="https://github.com/your-github-id" target="_blank">GitHub</a>
+                    </li>
+                    <li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+                        <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </section>
     </footer>
 
