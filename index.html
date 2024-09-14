@@ -124,7 +124,7 @@
         .right_section_video {
             width: 100%;
             height: auto;
-            max-width: 100%;
+            max-width: 300px;
             margin: 20px 0;
         }
 
@@ -164,7 +164,6 @@
             flex-wrap: wrap;
             list-style: none;
             padding: 0;
-            justify-content: center;
         }
 
         .contact-section ul li {
@@ -263,6 +262,51 @@
                 height: 18px;
             }
         }
+
+        @media (max-width: 768px) {
+    .project1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .project1 h2,
+    .project1 h3 {
+        text-align: center;
+    }
+
+    .project1 p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .project1_link {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .right_section_video {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .project1 h2,
+    .project1 h3 {
+        font-size: 1.1rem;
+    }
+
+    .project1 p {
+        font-size: 0.8rem;
+    }
+
+    .project1_link a img {
+        width: 30px;
+        height: 20px;
+    }
+}
+
     </style>
 </head>
 
