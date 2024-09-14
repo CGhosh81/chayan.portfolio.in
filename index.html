@@ -102,29 +102,25 @@
 
         .project1 {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: left;
-            margin: 20px 0;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
             background-color: rgb(18, 3, 61);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
 
         .project1 h2,
         .project1 h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
-            text-align: center;
-            width: 100%;
         }
 
         .right_section_video {
             width: 100%;
-            height: auto;
-            max-width: 300px;
+            max-width: 640px; /* Adjusted max-width for desktop */
             margin: 20px 0;
         }
 
@@ -137,8 +133,6 @@
             font-size: 1rem;
             line-height: 1.5;
             margin: 20px 0;
-            width: 100%;
-            text-align: center;
         }
 
         .project1_link {
@@ -236,6 +230,15 @@
                 width: 20px;
                 height: 20px;
             }
+
+            .project1 {
+                padding: 15px;
+            }
+
+            .right_section_video {
+                max-width: 100%;
+                margin: 10px 0;
+            }
         }
 
         @media (max-width: 480px) {
@@ -261,52 +264,21 @@
                 width: 18px;
                 height: 18px;
             }
+
+            .project1 h2,
+            .project1 h3 {
+                font-size: 1.1rem;
+            }
+
+            .project1 p {
+                font-size: 0.8rem;
+            }
+
+            .project1_link a img {
+                width: 30px;
+                height: 20px;
+            }
         }
-
-        @media (max-width: 768px) {
-    .project1 {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .project1 h2,
-    .project1 h3 {
-        text-align: center;
-    }
-
-    .project1 p {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    .project1_link {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .right_section_video {
-        max-width: 100%;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .project1 h2,
-    .project1 h3 {
-        font-size: 1.1rem;
-    }
-
-    .project1 p {
-        font-size: 0.8rem;
-    }
-
-    .project1_link a img {
-        width: 30px;
-        height: 20px;
-    }
-}
-
     </style>
 </head>
 
