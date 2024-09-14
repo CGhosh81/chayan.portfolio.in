@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chayan - Student</title>
+    <meta name="description" content="Chayan's portfolio showcasing projects, background, and contact information.">
+    <meta name="keywords" content="Chayan, portfolio, computer science, AI, machine learning, projects, contact">
+    <meta name="author" content="Chayan">
+    <title>Chayan's Portfolio</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            
             box-sizing: border-box;
         }
 
         body {
-            background-color:  #04093d;;
+            background-color: #04093d;
             color: white;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
         nav {
@@ -30,7 +33,7 @@
 
         nav .left {
             font-size: 1.5rem;
-            font-weight:bold;
+            font-weight: bold;
         }
 
         nav ul {
@@ -76,7 +79,9 @@
             height: auto;
         }
 
-        .About {
+        .About,
+        .project,
+        .contact-section {
             background-color: rgb(22, 3, 78);
             padding: 20px;
             border-radius: 10px;
@@ -84,7 +89,8 @@
             margin: 20px;
         }
 
-        .About h1 {
+        .About h1,
+        .contact-section h1 {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
@@ -94,17 +100,63 @@
             margin-bottom: 10px;
         }
 
-        .contact-section {
-            background-color: rgb(22, 3, 78);
+        .project1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            margin: 20px 0;
+            background-color: rgb(18, 3, 61);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
         }
 
-        .contact-section h1 {
-            font-size: 1.5rem;
+        .project1 h2,
+        .project1 h3 {
+            font-size: 1.3rem;
             margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .right_section_video {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 20px 0;
+        }
+
+        .right_section_video video {
+            width: 100%;
+            height: auto;
+        }
+
+        .project1 p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .project1_link {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .project1_link a {
+            text-decoration: none;
+            color: #0077b5;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+
+        .project1_link a img {
+            width: 35px;
+            height: 24px;
         }
 
         .contact-section ul {
@@ -210,13 +262,27 @@
                 height: 18px;
             }
         }
+
+        @media (max-width: 768px) {
+            .project1 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftSection_for_img img,
+            .right_section_video video {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="left"><h1>Chayan's Portfolio</h1></div>
+            <div class="left">
+                <h1>Chayan's Portfolio</h1>
+            </div>
             <div class="right">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -233,7 +299,7 @@
                 <span id="element"></span>
             </div>
             <div class="rightSection">
-                <img src="cg1.png" alt="img">
+                <img src="cg1.png" alt="Portrait of Chayan">
             </div>
         </section>
     </header>
@@ -248,31 +314,51 @@
         </p>
         <p>
             I completed my 12th grade at Monteswar Sagarbala High School and my 10th grade at
-            Dhamachia Vidyasagar Vidyamandir High School
+            Dhamachia Vidyasagar Vidyamandir High School.
         </p>
     </section>
 
+    <section class="project" id="project">
+        <h1>Projects:</h1>
+        <section class="project1">
+            <h2>Project 1:</h2>
+            <h3>GUI Calculator (Scientific)</h3>
+            <div class="right_section_video">
+                <video controls>
+                    <source src="scientific_calculator_video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>This is a group project where we used Java Swing and AWT to create a graphical interface. It was my
+                first project, and we completed it within a week.</p>
+            <div class="project1_link">
+                <h4>Links:</h4>
+                <a href="https://github.com/CGhosh81/projects" target="_blank" rel="noopener noreferrer">
+                    <img src="GitHub_Logo_White.png" alt="GitHub Logo">
+                </a>
+            </div>
+        </section>
+    </section>
+
     <footer>
-        <section class="contact" id="contact"><select name="" id="" disabled="disabled"></select>
+        <section class="contact" id="contact">
             <div class="contact-section">
                 <h1>Contact Me</h1>
                 <ul>
                     <li>
-                       
-                        <a href="https://www.facebook.com/share/DGQFcbBWTyyLScCK/?mibextid=qi2Omg"
-                            target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                            alt="Facebook Logo"></a>
+                        <a href="https://www.facebook.com/share/DGQFcbBWTyyLScCK/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+                        </a>
                     </li>
                     <li>
-                       
-                        <a href="https://github.com/CGhosh81" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                            alt="GitHub Logo"></a>
+                        <a href="https://github.com/CGhosh81" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
+                        </a>
                     </li>
                     <li>
-                        
-                        <a href="https://www.linkedin.com/in/chayan-ghosh-410b27266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
-                            target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="LinkedIn Logo"></a>
+                        <a href="https://www.linkedin.com/in/chayan-ghosh-410b27266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+                        </a>
                     </li>
                 </ul>
             </div>
